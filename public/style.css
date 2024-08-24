@@ -1,0 +1,39 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: black;
+  max-width: 100vw;
+}
+
+body:before {
+  content: "";
+  display: block;
+  height: 100px;
+}
+
+/*# sourceMappingURL=style.css.map */
+/* Scrollbar added */
+*::-webkit-scrollbar {
+  width: 5px;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 5px;
+  background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  border-radius: 10px;
+
+}

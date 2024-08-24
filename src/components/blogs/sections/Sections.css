@@ -1,0 +1,39 @@
+@keyframes translation {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 0.3;
+  }
+}
+@keyframes coloring {
+  0%, 100% {
+    color: #008080;
+  }
+  50% {
+    color: grey;
+  }
+}
+.sections .container ._s .c .card {
+  transition: all ease 0.3s;
+}
+.sections .container ._s .c .card:hover {
+  transform: scale(1.03);
+}
+.sections .container ._s .c .card .card-body .card-title {
+  font-weight: 800;
+  font-size: 20px;
+}/*# sourceMappingURL=Sections.css.map */
+
+.myedit-readmore-blogs{
+  background-color: #008080;
+  border:none;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+.myedit-readmore-blogs:hover{
+  background-color: #ffffff;
+  color: #008080;
+}

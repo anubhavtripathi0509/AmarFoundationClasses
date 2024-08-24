@@ -1,0 +1,53 @@
+@keyframes translation {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 0.3;
+  }
+}
+@keyframes coloring {
+  0%, 100% {
+    color: #008080;
+  }
+  50% {
+    color: grey;
+  }
+}
+.hero .container .row .c .left-side .title {
+  font-size: 30px;
+  font-weight: bolder;
+  /* word-break: break-all; */
+  /* word-wrap: break-word; */
+
+}
+.hero .container .row .c .left-side .title span {
+  color: #008080;
+}
+.hero .container .row .c .left-side .sub-title {
+  font-weight: bold;
+}
+.hero .container .row .c .left-side .desc {
+  font-size: 17px;
+}/*# sourceMappingURL=Hero.css.map */
+
+.myedit-readmore{
+  background-color: #008080;
+  border:none;
+  transition: all 0.2s ease-in-out;
+}
+.myedit-readmore:hover{
+  background-color: white;
+}
+
+.myedit-getintouch{
+  background-color: #008080;
+  color: white;
+  border:none;
+  transition: all 0.2s ease-in-out;
+}
+.myedit-getintouch:hover{
+  background-color: white;
+}

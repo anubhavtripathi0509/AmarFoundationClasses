@@ -1,0 +1,33 @@
+@keyframes translation {
+  0%, 100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 0.3;
+  }
+}
+@keyframes coloring {
+  0%, 100% {
+    color: #008080;
+  }
+  50% {
+    color: grey;
+  }
+}
+label {
+  font-weight: 600;
+}/*# sourceMappingURL=Contact.css.map */
+
+.myedit-sendbtn{
+  background-color: #008080;
+  border:none;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+.myedit-sendbtn:hover{
+  background-color: white;
+  color: #008080;
+}
