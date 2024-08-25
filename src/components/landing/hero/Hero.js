@@ -43,6 +43,7 @@ const Hero = () => {
         <div className="row align-items-center">
           <div className="c col-lg-6 col-12">
             <div className="left-side mb-lg-0 mb-5 text-lg-start text-center" >
+              
               <h3 className="title text-capitalize" style={{
                 "display": "flex",
                 "flex-direction": "row",
@@ -53,10 +54,25 @@ const Hero = () => {
                 "display": "flex",
                 "flex-direction": "row",
                 "justify-content": "center",
-              }}> {`Amar Foundation Classes`.split('').map((word, idx) => {
+              }}> {`Amar Foundation`.split('').map((word, idx) => {
                   return word === ' ' ? <div key={idx} className="word">&nbsp;</div> : <div style={{ color: "#008080" }} key={idx} className="word">{word}</div>
                 })}</div>
               </h3>
+              <h3 className="title text-capitalize" style={{
+                "display": "flex",
+                "flex-direction": "row",
+                "flex-wrap": "wrap",
+                "justify-content": "center",
+              }}>
+                <div style={{
+                "display": "flex",
+                "flex-direction": "row",
+                "justify-content": "center",
+              }}> {`Classes`.split('').map((word, idx) => {
+                  return word === ' ' ? <div key={idx} className="word">&nbsp;</div> : <div style={{ color: "#008080" }} key={idx} className="word">{word}</div>
+                })}</div>
+              </h3>
+
               <p className="sub-title text-muted text-center text-capitalize">
                 we always would be nascent
               </p>
