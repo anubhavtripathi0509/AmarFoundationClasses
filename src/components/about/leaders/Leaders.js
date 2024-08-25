@@ -28,12 +28,12 @@ class Leaders extends Component
 	render()
 	{
 		return (
-			<div className = 'leaders py-5 mb-5'>
-				<div className = 'container'>
-					<div className = 'title py-5 text-md-start text-center'>
-						<h4 className = 'sub-title text-capitalize'>SupnitsClasses <span>leaders</span></h4>
+			<div className='leaders py-5 mb-5'>
+				<div className='container text-center'>
+					<div className='title py-5'>
+						<h4 className='sub-title text-capitalize'>Amar Foundation Classes <span>leaders</span></h4>
 					</div>
-					<div className = '_b d-flex justify-content-center flex-wrap'>
+					<div className='_b d-flex justify-content-center flex-wrap'>
 						{this.display_leaders()}
 					</div>
 				</div>

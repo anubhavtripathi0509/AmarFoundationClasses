@@ -1,26 +1,19 @@
 
 let leaders = [
 	{
-		name: 'amine ait ouazghour',
-		desc: 'full stack javascript developer, cyber security lover and problem solver',
-		skills: 'Full Sack Developer | Pentester',
-		nickname: "amaitou",
+		name: 'Ashutosh Tripathi',
+		desc: 'Dedicated to inspiring students and enhancing academic excellence.',
+		skills: 'M.Sc, MCA, B.Ed',
+		nickname: "ashutoshtripathi",
 		avatar: require('../../../images/avatars/1.jpg')
 	},
 	{
-		name: 'jackson eder',
-		desc: 'passionate about cybersecurity and read teaming stuff',
-		skills: 'Back-end Developer | Pythoner',
-		nickname: "j4ck5on",
+		name: 'Siddhant Pandey',
+		desc: 'Passionate about science, fostering curiosity and understanding.',
+		skills: 'M.Sc',
+		nickname: "siddhantpandey",
 		avatar: require('../../../images/avatars/2.jpg')
 	},
-	{
-		name: 'patrick pavarice',
-		desc: 'creative with a way you cannot even imagine',
-		skills: 'UI/UX Designer',
-		nickname: "c1c4d4",
-		avatar: require('../../../images/avatars/3.jpg')
-	}
 ]
 
 export {leaders}
