@@ -57,10 +57,21 @@ class Footer extends Component
 						<div className='c col-lg-4 col-md-6 col-12'>
 							<div className='s mb-3 mb-md-0'>
 								<h6 className='footer-title mb-3'>Amar Foundation Classes</h6>
-								<p className='footer-text'>Providing exceptional education and support for students in classes 9 to 12, we focus on academic excellence and personal growth across ICSE, CBSE, and ISC boards.</p>
-								<h6 className='footer-e-mail text-muted'>
+								<p className='footer-text'>
+								Providing exceptional education and support for students in classes 9 to 12, we focus on academic excellence and personal growth across ICSE, CBSE, and ISC boards.
+								</p>
+								<div className='d-flex flex-column'>
+								<h6 className='footer-e-mail text-muted mb-2'>
+									<a href="mailto:ashutp10@gmail.com" className='text-decoration-none text-muted'>
 									<i className='fas fa-envelope me-2'></i>ashutp10@gmail.com
+									</a>
 								</h6>
+								<h6 className='footer-e-mail text-muted'>
+									<a href="tel:+917007258318" className='text-decoration-none text-muted'>
+									<i className='fas fa-phone me-2'></i>+91 7007258318
+									</a>
+								</h6>
+								</div>
 							</div>
 						</div>
 						<div className = 'c col-lg-4 col-md-3 col-12'>

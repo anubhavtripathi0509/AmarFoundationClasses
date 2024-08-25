@@ -41,6 +41,11 @@
   transition: 0.3s;
 }
 
+.small-font {
+  font-size: 0.8rem;
+}
+
+
 .hover:after {
   content: "";
   height: 2px;

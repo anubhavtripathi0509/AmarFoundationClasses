@@ -7,15 +7,12 @@ import AuthService from "./AuthService";
 class Navbar extends Component {
   constructor(props) {
     super(props);
-    this.state = { s: false, isAuthenticated: false, darkMode: false };
+    this.state = { s: false, isAuthenticated: AuthService.isAuthenticated(), darkMode: false };
     this.collapseRef = createRef();
   }
 
   componentDidMount() {
     window.addEventListener("scroll", this.addShadow);
-    document.addEventListener("DOMContentLoaded", this.addShadow);
-    const isAuthenticated = AuthService.isAuthenticated();
-    this.setState({ isAuthenticated });
   }
 
   componentWillUnmount() {
@@ -23,10 +20,11 @@ class Navbar extends Component {
   }
 
   toggleDarkMode = () => {
-    const newDarkMode = !this.state.darkMode;
-    this.setState({ darkMode: newDarkMode });
-
-    document.body.classList.toggle("dark-mode", newDarkMode);
+    this.setState(prevState => {
+      const newDarkMode = !prevState.darkMode;
+      document.body.classList.toggle("dark-mode", newDarkMode);
+      return { darkMode: newDarkMode };
+    });
   };
 
   handleLogout = () => {
@@ -36,29 +34,26 @@ class Navbar extends Component {
 
   handleNavLinkClick = () => {
     const collapseElement = this.collapseRef.current;
-    if (collapseElement && collapseElement.classList.contains("show")) {
-      const bsCollapse = new window.bootstrap.Collapse(collapseElement, {
-        toggle: true,
-      });
-      bsCollapse.hide();
+    if (collapseElement?.classList.contains("show")) {
+      new window.bootstrap.Collapse(collapseElement, { toggle: true }).hide();
     }
   };
 
   displayNavbarItems = () => {
-    let items = navbar_items.map((item) => (
-      <li className="nav-item me-lg-3 my-lg-0 my-2" key={Math.random()}>
+    const { isAuthenticated } = this.state;
+    return navbar_items.map((item, index) => (
+      <li className="nav-item me-lg-3 my-lg-0 my-2" key={index}>
         <NavLink
           className="nav-link text-capitalize position-relative hover"
-          to={`/${item.name === "" ? "" : item.name}`}
+          to={`/${item.name || ""}`}
           onClick={this.handleNavLinkClick}
         >
           <i className={`${item.icon} me-2`}></i>
-          {item.name === "" ? "home" : item.name}
+          {item.name || "home"}
         </NavLink>
       </li>
-    ));
-    if (this.state.isAuthenticated) {
-      items.push(
+    )).concat(
+      isAuthenticated ? (
         <li className="nav-item me-lg-3 my-lg-0 my-2" key="logout">
           <button
             className="nav-link btn btn-link text-capitalize position-relative hover"
@@ -70,9 +65,7 @@ class Navbar extends Component {
             Logout
           </button>
         </li>
-      );
-    } else {
-      items.push(
+      ) : (
         <li className="nav-item me-lg-3 my-lg-0 my-2" key="login">
           <NavLink
             className="nav-link text-capitalize position-relative hover"
@@ -82,34 +75,21 @@ class Navbar extends Component {
             Login
           </NavLink>
         </li>
-      );
-    }
-
-    return items;
+      )
+    );
   };
 
   addShadow = () => {
-    window.scrollY >= 80
-      ? this.setState({ s: true })
-      : this.setState({ s: false });
+    this.setState({ s: window.scrollY >= 80 });
   };
 
   render() {
+    const { darkMode, s } = this.state;
     return (
-      <nav
-        className={`navbar navbar-expand-lg ${
-          this.state.darkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"
-        } text-dark fixed-top ${this.state.s ? "shadow-lg" : "shadow"}`}
-      >
+      <nav className={`navbar navbar-expand-lg ${darkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"} fixed-top ${s ? "shadow-lg" : "shadow"}`}>
         <div className="container py-2">
           <Link className="navbar-brand" to="/">
-            <img
-              src="/favicon1.ico"
-              alt="favicon"
-              className="me-2"
-              width="50"
-              height="50"
-            />
+            <img src="/favicon1.ico" alt="favicon" width="50" height="50" />
             <span>A</span>mar<span>F</span>oundation<span>C</span>lasses
           </Link>
           <button
@@ -124,23 +104,20 @@ class Navbar extends Component {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div
-            className="collapse navbar-collapse justify-content-end"
-            id="navbarSupportedContent"
-            ref={this.collapseRef}
-          >
-            <ul className="navbar-nav">{this.displayNavbarItems()}</ul>
-
+          <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent" ref={this.collapseRef}>
+            <ul className="navbar-nav">
+              {this.displayNavbarItems()}
+            </ul>
             <div className="form-check form-switch ms-3">
               <input
                 className="form-check-input"
                 type="checkbox"
                 id="darkModeSwitch"
-                checked={this.state.darkMode}
+                checked={darkMode}
                 onChange={this.toggleDarkMode}
               />
               <label className="form-check-label" htmlFor="darkModeSwitch">
-                {this.state.darkMode ? "Dark Mode" : "Light Mode"}
+                {darkMode ? "Dark Mode" : "Light Mode"}
               </label>
             </div>
           </div>
