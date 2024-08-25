@@ -92,7 +92,7 @@ class Footer extends Component
 						</div>
 					</div>
 					<div className = 'copyrights text-center'>
-						<p className="small text-muted mb-0">&copy; Copyrights. All rights reserved. <Link to = "/">Amar Foundation Classes</Link></p>
+						<p className="small text-muted mb-0">&copy; Developed By: <Link to = "/">Anubhav Tripathi: 8104083562</Link></p>
 					</div>
 				</div>
 			</div>
