@@ -54,11 +54,13 @@ class Footer extends Component
 						{this.display_accounts()}
 					</div>
 					<div className = 'row mb-4'>
-						<div className = 'c col-lg-4 col-md-6 col-12'>
-							<div className = 's mb-3 mb-md-0'>
-								<h6 className = 'footer-title mb-3'>Amar Foundation Classes</h6>
-								<p className = 'footer-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-								<h6 className = 'footer-e-mail text-muted'><i className = 'fas fa-envelope me-2'></i>openschool@support.com</h6>
+						<div className='c col-lg-4 col-md-6 col-12'>
+							<div className='s mb-3 mb-md-0'>
+								<h6 className='footer-title mb-3'>Amar Foundation Classes</h6>
+								<p className='footer-text'>Providing exceptional education and support for students in classes 9 to 12, we focus on academic excellence and personal growth across ICSE, CBSE, and ISC boards.</p>
+								<h6 className='footer-e-mail text-muted'>
+									<i className='fas fa-envelope me-2'></i>ashutp10@gmail.com
+								</h6>
 							</div>
 						</div>
 						<div className = 'c col-lg-4 col-md-3 col-12'>

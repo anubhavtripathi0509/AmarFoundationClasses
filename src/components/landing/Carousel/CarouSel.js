@@ -7,7 +7,7 @@ function CarouSel() {
             <Carousel.Item>
                 <img
                     className="d-block w-100 " style={{ height: "60vh" }}
-                    src="/static/media/hero.a9b57f7fc78a6c0adc53d4c82950f6ce.svg"
+                    src="../../../images/Carousel/1.jpg"
                     alt="First slide"
                 />
                 <Carousel.Caption>

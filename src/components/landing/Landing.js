@@ -13,14 +13,14 @@ class Landing extends Component {
 	render() {
 		return (
 			<>
-				{/* <CarouSel /> */}
 				<Hero />
 				<Materials />
+				{/* <CarouSel /> */}
+				<Rs />
 				<Sub />
 				<Stats />
-				<Rs />
-				<Tes />
-				<Faq />
+				{/* <Tes /> */}
+				{/* <Faq /> */}
 			</>
 		)
 	}

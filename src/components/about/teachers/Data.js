@@ -5,7 +5,7 @@ let teachers = [
 		material: 'M.Sc, MCA, B.Ed',
 		img: require('../../../images/teachers/1.png'),
 		gmail: 'ashutp10@gmail.com',
-		tele: '917007258318'
+		tele: '+91 7007258318'
 	
 	},
 	{
@@ -13,7 +13,7 @@ let teachers = [
 		material: 'M.Sc',
 		img: require('../../../images/teachers/2.png'),
 		gmail: 'rsiddhant444@gmail.com ',
-		tele: '917007258318'
+		tele: '+91 8787089578'
 	}
 ]
 
